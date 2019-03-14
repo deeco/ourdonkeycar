@@ -1,0 +1,71 @@
+left 460
+centre 390
+right 310
+
+Reverse 290-335
+Stop 370
+Forward 398-470
+
+systemctl start artifactory.service
+
+
+systemctl status artifactory.service
+
+/bin/bash /opt/artifactory/bin/artifactoryManage.sh start
+
+chown -R artifactory:artifactory /opt/artifactory/*
+
+
+http://web.archive.org/web/20181012191636/http://vivin.net/2018/09/26/getting-artifactory-running-on-ubuntu-18-04/
+
+eyJhcnRpZmFjdG9yeSI6eyJpZCI6IiIsIm93bmVyIjoicjRwMyIsInZhbGlkRnJvbSI6MTU1MDI5MjMzMDQyNiwiZXhwaXJlcyI6MTU4MTgyODMzMDQyMCwidHlwZSI6IkVOVEVSUFJJU0VfUExVUyIsInRyaWFsIjpmYWxzZSwicHJvcGVydGllcyI6e319fQ==
+
+
+https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
+https://dev.vividbreeze.com/installing-artifactory-with-docker-and-ansible/
+
+ java -jar artifactory-injector-1.1.jar
+
+/var/lib/docker/overlay2/5bddcae714d315ad8d66770d1a118b4818eceac7ffd763e5ec3cb63c49e1fb0b/diff/opt/jfrog/artifactory/webapps/artifactory.war
+/var/lib/docker/overlay2/fc5a300f826ac996c992d26330289994a6b33b3140640fc397ec500824d0d3ac/merged/opt/jfrog/artifactory/webapps/artifactory.war
+/var/lib/docker/overlay2/fc5a300f826ac996c992d26330289994a6b33b3140640fc397ec500824d0d3ac/diff/opt/jfrog/artifactory/webapps/artifactory.war
+
+
+ /var/lib/docker/overlay2/fc5a300f826ac996c992d26330289994a6b33b3140640fc397ec500824d0d3ac/merged/opt/jfrog/artifactory/
+
+
+/var/lib/docker/overlay2/c221b1e5b54dd4c8ba17bc960bdf0deb9f52ef9d27704263835b8d6cf2e70a97/merged/opt/jfrog/artifactory/
+/var/lib/docker/overlay2/8585c56540403e91224406428a6dff6a7abaadf78ec5b5d03d02fc2320e7a5b6/diff/opt/jfrog/artifactory/
+/var/lib/docker/overlay2/5bddcae714d315ad8d66770d1a118b4818eceac7ffd763e5ec3cb63c49e1fb0b/diff/opt/jfrog/artifactory/
+
+
+curl -I -k -v https://192.168.1.14/api/system/ping
+
+curl -I -k -v https://192.168.1.14/artifactory/api/system/ping
+
+curl -I -k -v https://<artifactory url>/api/system/ping
+
+http://192.168.1.14:8080/artifactory/webapp/#/home
+
+artprod.mycompany
+
+openssl req -subj '/CN=artifactory.server' -x509 -newkey rsa:4096 -nodes- keyout key.pem -out cert.pem -days 999
+
+/var/lib/docker/overlay2/8585c56540403e91224406428a6dff6a7abaadf78ec5b5d03d02fc2320e7a5b6/diff/opt/jfrog/artifactory/
+/var/lib/docker/overlay2/5bddcae714d315ad8d66770d1a118b4818eceac7ffd763e5ec3cb63c49e1fb0b/diff/opt/jfrog/artifactory/
+/var/lib/docker/overlay2/dc4f461b562c3ce240ee25e564368bfc33e3624d734355a7d05387830da3d18c/merged/opt/jfrog/artifactory/
+
+
+
+eyJhcnRpZmFjdG9yeSI6eyJpZCI6IiIsIm93bmVyIjoicjRwMyIsInZhbGlkRnJvbSI6MTU1MDYyMzUzMjA2OSwiZXhwaXJlcyI6MTU4MjE1OTUzMTQ0NCwidHlwZSI6IkVOVEVSUFJJU0VfUExVUyIsInRyaWFsIjpmYWxzZSwicHJvcGVydGllcyI6e319fQ==
+
+eyJhcnRpZmFjdG9yeSI6eyJpZCI6IiIsIm93bmVyIjoicjRwMyIsInZhbGlkRnJvbSI6MTU1MDU0
+MTY3ODczNSwiZXhwaXJlcyI6MTU4MjA3NzY3ODQxNiwidHlwZSI6IkVOVEVSUFJJU0VfUExVUyIs
+InRyaWFsIjpmYWxzZSwicHJvcGVydGllcyI6e319fQ==
+
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout dockerrepo.key -x509 -days 99 -out dockerrepo.crt -subj /CN=artifactory
+
+sudo openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout artifactory.key -out artifactory.crt -extensions san -config <(echo "[req]"; echo distinguished_name=req; echo "[san]"; echo subjectAltName=DNS:artifactory.local,DNS:artifactory.net,IP:192.168.1.10) -subj /CN=artifactory.local
+
+
+sudo openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout artifactory.key -out artifactory.crt -subj /CN=artifactory.local -addext subjectAltName=DNS:artifactory.local,DNS:artifactory.net,IP:192.168.1.10
